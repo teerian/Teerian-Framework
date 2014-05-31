@@ -1,0 +1,806 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+/*
+Teerian Framework
+Copyright (c) 2014 Teerian
+Licensed under the MIT license.
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+a {
+  background: transparent;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+pre {
+  white-space: pre-wrap;
+}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+select {
+  text-transform: none;
+}
+html input[type="button"],
+button,
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+#header {
+  background-color: #061f70;
+}
+#header img {
+  display: block;
+}
+@media (max-width: 768px) {
+  #header {
+    display: none;
+  }
+}
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2.8%;
+}
+#footer-extra {
+  background-color: #ecf0f1;
+  padding: 20px 0;
+  margin: 40px 0 0 0;
+}
+#footer {
+  background-color: #061f70;
+  padding: 20px 0;
+  color: #ffffff;
+}
+#footer h1,
+#footer h2,
+#footer h3,
+#footer h4,
+#footer h5,
+#footer h6 {
+  color: #ffffff;
+}
+#footer a:link {
+  color: #ffb000;
+}
+#footer a:visited {
+  color: #ffb000;
+}
+#footer a:hover {
+  color: #cc8d00;
+}
+a:link {
+  color: #4869d6;
+  text-decoration: none;
+}
+a:visited {
+  color: #4869d6;
+  text-decoration: none;
+}
+a:hover {
+  color: #2b4ec0;
+  text-decoration: underline;
+}
+nav {
+  height: 40px;
+  width: 100%;
+  background: #4869d6;
+  position: relative;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+  height: 40px;
+}
+nav li {
+  display: inline;
+  float: left;
+}
+nav a {
+  display: inline-block;
+  padding: 0 15px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 700;
+}
+nav a:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+nav a:visited {
+  color: #ffffff;
+}
+nav a:hover,
+nav nav a:active {
+  background-color: #061f70;
+  color: #ffb000;
+}
+nav .active {
+  pointer-events: none;
+  cursor: default;
+  background-color: #4869d6 !important;
+  color: #ffb000 !important;
+}
+nav a#pull {
+  display: none;
+}
+@media (max-width: 768px) {
+  nav {
+    height: auto;
+    border-bottom: 0;
+  }
+  nav > .content {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul {
+    width: 100%;
+    display: none;
+    height: auto;
+  }
+  nav li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  nav a {
+    text-align: left;
+    width: 94.4%;
+    padding: 0 2.8%;
+  }
+  nav a#pull {
+    display: block;
+    background-color: #061f70;
+    color: #ffffff;
+    width: 94.4%;
+    position: relative;
+    text-decoration: none;
+    padding: 0 2.8%;
+  }
+  nav a#pull:after {
+    content: "";
+    background: url('../img/nav-icon.png') no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 1.4%;
+    top: 10px;
+  }
+}
+.row {
+  width: 100%;
+  overflow: hidden;
+  margin: 1% 0 1% 0;
+}
+.row .row {
+  margin: 0;
+}
+.row .row .row {
+  margin: 0;
+}
+.row > div {
+  overflow: hidden;
+  float: left;
+  margin-left: 1.4%;
+}
+@media (max-width: 480px) {
+  .row > div {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+}
+.row > div:first-child {
+  margin-left: 0;
+}
+.col-1 {
+  width: 7.049999999999998%;
+}
+.col-2 {
+  width: 15.499999999999996%;
+}
+.col-3 {
+  width: 23.950000000000003%;
+}
+.col-4 {
+  width: 32.4%;
+}
+.col-5 {
+  width: 40.85000000000001%;
+}
+.col-6 {
+  width: 49.300000000000004%;
+}
+.col-7 {
+  width: 57.75000000000001%;
+}
+.col-8 {
+  width: 66.19999999999999%;
+}
+.col-9 {
+  width: 74.64999999999999%;
+}
+.col-10 {
+  width: 83.10000000000001%;
+}
+.col-11 {
+  width: 91.54999999999998%;
+}
+.col-12 {
+  width: 100%;
+}
+.bg-black {
+  background-color: #000000;
+}
+.bg-white {
+  background-color: #ffffff;
+}
+.bg-gray-light {
+  background-color: #ecf0f1;
+}
+.bg-gray {
+  background-color: #cfd9db;
+}
+.bg-gray-dark {
+  background-color: #b1c2c6;
+}
+.bg-blue-light {
+  background-color: #4869d6;
+}
+.bg-blue-dark {
+  background-color: #061f70;
+}
+.bg-orange-light {
+  background-color: #ffb000;
+}
+.bg-orange-dark {
+  background-color: #cc8d00;
+}
+.bg-facebook {
+  background-color: #3b5998;
+}
+.bg-twitter {
+  background-color: #00aced;
+}
+.bg-youtube {
+  background-color: #bb0000;
+}
+.bg-google-plus {
+  background-color: #dd4b39;
+}
+.bg-github {
+  background-color: #171515;
+}
+body {
+  font: 14px/1.7 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #333333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+h1 {
+  font-size: 38px;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 26px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 14px;
+}
+.large-font {
+  font-size: 125%;
+}
+small {
+  font-size: 90%;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: 'Inconsolata', monospace;
+}
+.medium-icon {
+  font-size: 24px;
+}
+.large-icon {
+  font-size: 32px;
+}
+.link-facebook {
+  color: #3b5998 !important;
+  text-decoration: none !important;
+}
+.link-facebook :hover {
+  color: #2d4373 !important;
+}
+.link-twitter {
+  color: #00aced !important;
+  text-decoration: none !important;
+}
+.link-twitter :hover {
+  color: #0087ba !important;
+}
+.link-youtube {
+  color: #bb0000 !important;
+  text-decoration: none !important;
+}
+.link-youtube :hover {
+  color: #880000 !important;
+}
+.link-google-plus {
+  color: #dd4b39 !important;
+  text-decoration: none !important;
+}
+.link-google-plus :hover {
+  color: #c23321 !important;
+}
+.link-github {
+  color: #171515 !important;
+  text-decoration: none !important;
+}
+.link-github :hover {
+  color: #000000 !important;
+}
+hr {
+  margin: 20px 0;
+  border: 1px solid #ecf0f1;
+}
+pre {
+  padding: 10px;
+  background-color: #ecf0f1;
+  border: 1px solid #b1c2c6;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.panel {
+  padding: 10px;
+  background-color: #ecf0f1;
+  border: 1px solid #b1c2c6;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.panel * {
+  padding: 5px;
+  margin: 0;
+}
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.space {
+  margin: 10px;
+}
+.top {
+  margin-top: 10px;
+}
+.last {
+  margin-right: 0;
+}
+.button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: 0;
+  text-decoration: none;
+}
+.button:hover {
+  text-decoration: none;
+}
+.button-default {
+  color: #ffffff !important;
+  background: #4869d6 !important;
+}
+.button-default:hover {
+  background: #2b4ec0 !important;
+}
+.button-gray {
+  color: #ffffff !important;
+  background: #b1c2c6 !important;
+}
+.button-gray:hover {
+  background: #94aab0 !important;
+}
+.button-orange {
+  color: #ffffff !important;
+  background: #ffb000 !important;
+}
+.button-orange:hover {
+  background: #cc8d00 !important;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+#full-bg-image {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -999;
+}
+#full-bg-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  max-width: 200%;
+  z-index: -999;
+}
+form {
+  margin: 5px 0;
+}
+form > label,
+form button {
+  margin: 10px 0 !important;
+}
+@media (max-width: 768px) {
+  form > label,
+  form button {
+    display: block !important;
+  }
+}
+input[type="checkbox"],
+input[type="radio"],
+.inline-element {
+  display: inline !important;
+  width: auto !important;
+}
+input,
+textarea {
+  padding: 5px;
+  width: 100%;
+  max-width: 200px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (max-width: 480px) {
+  input,
+  textarea {
+    max-width: 100% !important;
+  }
+}
+textarea {
+  max-width: 300px;
+  height: 100px;
+}
+.stacked-form label,
+.stacked-form input,
+.stacked-form textarea,
+.stacked-form button {
+  display: block;
+}
+.float-labels label,
+.float-labels button {
+  margin: 5px 0 !important;
+}
+.float-labels label {
+  float: left;
+  display: inline;
+  text-align: right;
+  margin-right: 15px !important;
+  width: 100px;
+}
+@media (max-width: 480px) {
+  .float-labels label {
+    float: none;
+    text-align: left;
+  }
+}
+.float-labels .float-submit {
+  margin-left: 115px !important;
+}
+@media (max-width: 480px) {
+  .float-labels .float-submit {
+    margin-left: 0 !important;
+  }
+}
+.styled-form input,
+.styled-form textarea {
+  border: 2px solid #cfd9db;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  outline: 0;
+}
+.styled-form input:focus,
+.styled-form textarea:focus {
+  border-color: #4869d6;
+}
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?40542924');
+  src: url('../font/fontello.eot?40542924#iefix') format('embedded-opentype'), url('../font/fontello.woff?40542924') format('woff'), url('../font/fontello.ttf?40542924') format('truetype'), url('../font/fontello.svg?40542924#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?40542924#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+.icon-youtube:before {
+  content: '\e800';
+}
+/* '' */
+.icon-call:before {
+  content: '\e801';
+}
+/* '' */
+.icon-email:before {
+  content: '\e802';
+}
+/* '' */
+.icon-desktop:before {
+  content: '\e803';
+}
+/* '' */
+.icon-cogs:before {
+  content: '\e804';
+}
+/* '' */
+.icon-facebook:before {
+  content: '\e805';
+}
+/* '' */
+.icon-twitter-bird:before {
+  content: '\e806';
+}
+/* '' */
+.icon-googleplus:before {
+  content: '\e807';
+}
+/* '' */
+.icon-github:before {
+  content: '\e808';
+}
+/* '' */
+.icon-person:before {
+  content: '\e809';
+}
+/* '' */
+.icon-linkedin:before {
+  content: '\e80a';
+}
+/* '' */
+.icon-wrench:before {
+  content: '\e80b';
+}
+/* '' */

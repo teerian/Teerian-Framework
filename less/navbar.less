@@ -1,0 +1,90 @@
+// Navbar
+
+nav {  
+    height:		@nav-height;  
+    width:		100%;  
+    background:	@nav-background;
+    position:	relative; 
+	ul {  
+		padding:	0;  
+		margin:		0;
+		height:		@nav-height;  
+	}
+	li {  
+		display:	inline;  
+		float:		left;
+	}
+	a {  
+		display:			inline-block;  
+		padding:			0 15px;
+		text-align:			center;
+		line-height: 		40px;  
+		font-weight:		@nav-font-weight;
+	}
+	a:link {
+		color:				@nav-link-color;
+		text-decoration: 	none;
+	}
+	a:visited { 
+		color:				@nav-visited-link;
+	}
+	a:hover, nav a:active { 
+    	background-color:	@nav-hover-bg;  
+		color:				@nav-hover-link;
+	}
+	.active {
+		pointer-events:		none;
+		cursor:				default;
+		background-color:	@nav-background !important;
+		color:				@nav-hover-link !important;
+	}
+	a#pull	{  
+		display:	none;  
+	}
+}
+
+@media @nav-breakpoint {
+	nav {
+		height:			auto;
+		border-bottom:	0; 
+		> .content {
+			max-width:	100%;
+   			margin:		0;
+			padding:	0;
+		}
+		ul {  
+        	width:		100%;  
+        	display:	none;  
+        	height:		auto;
+    	}
+		li {  
+        	display:	block;  
+        	float:		none;  
+        	width:		100%;
+    	}
+		a { 
+        	text-align:	left;  
+        	width:		100%-(@nav-pull-padding*2);
+			padding:	0 @nav-pull-padding;
+    	}
+		a#pull {  
+        	display:			block;
+        	background-color:	@nav-pull-bg; 
+			color:				@nav-pull-color; 
+        	width:				100%-(@nav-pull-padding*2);  
+        	position:			relative;
+			text-decoration:	none;
+			padding:			0 @nav-pull-padding;
+    	}
+		a#pull:after {  
+        	content:		"";  
+        	background:		@nav-pull-icon no-repeat;  
+        	width:			30px; 
+        	height:			30px;  
+        	display:		inline-block;  
+        	position:		absolute;  
+        	right:			@nav-pull-padding/2;
+        	top:			10px;
+    	}
+	}
+}  

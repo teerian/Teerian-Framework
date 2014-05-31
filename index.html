@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>Teerian Framework</title>
+    
+    <link href="css/teerian.min.css" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    
+<!-- Header and Navigation -->
+    
+<div id="header">
+    <div class="content"><img src="img/teerian-logo.png" alt="Teerian" /></div>
+</div>
+
+<nav class="clearfix">  
+    <ul class="content clearfix">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#get-started">Get Started</a></li>
+        <li><a href="#basic-styles">Basic Styles</a></li>
+        <li><a href="#grid">Grid</a></li>
+        <li><a href="#colors">Colors</a></li>   
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#misc">Misc</a></li> 
+        <li><a href="#credits">Credits</a></li>    
+    </ul>  
+    <a href="#" id="pull">Teerian Framework</a>  
+</nav>
+
+<!-- Content -->
+
+<div class="content">
+    
+    <h1>Teerian Framework</h1>
+    
+    <p class="large-font">A responsive CSS Framework built with LESS</p>
+    
+    <p><a class="button button-default" href="https://github.com/teerian/Teerian-Framework" target="_blank">
+    View on GitHub</a></p>
+    
+    <p>Last updated: May 31, 2014.</p>
+    
+    <div class="row clearfix">
+        
+        <div class="col-6">
+            <p><strong>Browser Support</strong> - Teerian Framework
+            works in all modern browsers on desktops and mobile devices:
+            latest Chrome, Firefox, Safari, Opera and IE8+.</p>
+        </div>
+        
+        <div class="col-6">
+            <p><strong>License</strong> - Licensed under the
+            <a href="https://github.com/teerian/Teerian-Framework/blob/master/LICENSE" target="_blank">MIT license</a>. This means that
+            Teerian Framework is free for commercial and non-profit use.</p>
+        </div>
+        
+    </div>
+    
+    <hr>
+        
+    <!-- Get Started -->
+    
+    <h2 id="get-started">Get Started</h2>
+    
+    <h3>Basic Template</h3>
+    
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"&gt;
+    
+    &lt;title&gt;Basic Template&lt;/title&gt;
+    &lt;link href="css/teerian.min.css" rel="stylesheet"&gt;
+    
+    &lt;!--[if lt IE 9]&gt;
+    &lt;script src="js/html5shiv.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    
+&lt;div id="header"&gt;
+    &lt;div class="content"&gt;&lt;img src="img/logo.png" alt="" /&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;nav class="clearfix"&gt;
+    &lt;ul class="content clearfix"&gt; 
+        &lt;li&gt;&lt;a href="#" class="active"&gt;Disabled Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="#" id="pull"&gt;Menu text&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;div class="content"&gt;
+    &lt;h1&gt;Basic Template&lt;/h1&gt;
+    &lt;p&gt;Content...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="footer-extra"&gt;
+    &lt;div class="content"&gt;
+        &lt;p&gt;Content...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+         
+&lt;div id="footer"&gt;
+    &lt;div class="content"&gt;
+        &lt;p class="text-center"&gt;Teerian Framework&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/teerian.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    
+    <p><a href="basic-template.html">View Demo</a></p>
+        
+    <hr>
+        
+    <!-- Basic Styles -->
+        
+    <h2 id="basic-styles">Basic Styles</h2>
+    
+    <h3>Variables.less</h3>
+    
+    <h4>Wrapper</h4>
+    
+    <pre>// Content
+@page-width:		1000px;
+@page-padding:		2.8%;</pre>
+    
+    <h4>Media Queries</h4>
+    
+    <pre>// Media Queries
+@small-devices:		~"(max-width: 480px)";
+@medium-devices:	~"(max-width: 768px)";
+@large-devices:		~"(max-width: 992px)";</pre>
+    
+    <h4>Header</h4>
+    
+    <pre>// Header
+@header-breakpoint:	@medium-devices;</pre>
+
+    <h4>Navigation</h4>
+    
+    <pre>// Navigation
+@nav-height:		40px;
+@nav-font-weight:	700;
+@nav-breakpoint:	@medium-devices;
+@nav-pull-icon:		url('../img/nav-icon.png');
+@nav-pull-padding:	@page-padding;</pre>
+    
+    <h4>Footer</h4>
+    
+    <pre>// Footer
+@footer-padding:	20px 0;
+@footer-extra-margin:	40px 0 0 0;</pre>
+    
+    <h3>Header and Navigation</h3>
+    
+    <pre>&lt;div id="header"&gt;
+    &lt;div class="content"&gt;&lt;img src="img/logo.png" alt="" /&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;nav class="clearfix"&gt;
+    &lt;ul class="content clearfix"&gt; 
+        &lt;li&gt;&lt;a href="#" class="active"&gt;Disabled Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="#" id="pull"&gt;Menu text&lt;/a&gt;
+&lt;/nav&gt;</pre>
+    
+    <h3>Footer</h3>
+    
+    <pre>&lt;div id="footer-extra"&gt;
+    &lt;div class="content"&gt;   
+    	&lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    
+&lt;div id="footer"&gt;
+    &lt;div class="content"&gt;    
+    	&lt;p>...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+    
+    <hr>
+        
+    <!-- Grid System -->
+        
+    <h2 id="grid">Grid System</h2>
+    
+    <h3>Variables.less</h3>
+    
+    <pre>@row-width:             100%;
+@grid-columns:          12;
+@col-margin-horizontal: 1.4%;
+@col-margin-vertical:   1.0%;
+@grid-breakpoint:       @small-devices;</pre>
+    
+    <h3>12-column-grid.less</h3>
+    
+    <pre>.col-1 {.col(1)}
+.col-2 {.col(2)}
+.col-3 {.col(3)}
+.col-4 {.col(4)}
+.col-5 {.col(5)}
+.col-6 {.col(6)}
+.col-7 {.col(7)}
+.col-8 {.col(8)}
+.col-9 {.col(9)}
+.col-10 {.col(10)}
+.col-11 {.col(11)}
+.col-12 {.col(12)}</pre>
+    
+    <h3>Examples</h3>
+    
+    <h4>Twelve Columns</h4>
+
+    <div class="row clearfix">
+        <div class="col-1 bg-gray"><p>.col(1)</p></div>
+        <div class="col-1 bg-gray"><p>.col(1)</p></div>
+        <div class="col-1 bg-gray"><p>.col(1)</p></div>
+        <div class="col-1 bg-gray"><p>.col(1)</p></div>
+        <div class="col-1 bg-gray"><p>.col(1)</p></div>
+        <div class="col-1 bg-gray"><p>.col(1)</p></div>
+        <div class="col-1 bg-gray"><p>.col(1)</p></div>
+        <div class="col-1 bg-gray"><p>.col(1)</p></div>
+        <div class="col-1 bg-gray"><p>.col(1)</p></div>
+        <div class="col-1 bg-gray"><p>.col(1)</p></div>
+        <div class="col-1 bg-gray"><p>.col(1)</p></div>
+        <div class="col-1 bg-gray"><p>.col(1)</p></div>
+    </div>
+    
+    <pre>&lt;div class="row clearfix"&gt;
+    &lt;div class="col-1"&gt;&lt;p&gt;.col(1)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-1"&gt;&lt;p&gt;.col(1)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-1"&gt;&lt;p&gt;.col(1)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-1"&gt;&lt;p&gt;.col(1)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-1"&gt;&lt;p&gt;.col(1)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-1"&gt;&lt;p&gt;.col(1)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-1"&gt;&lt;p&gt;.col(1)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-1"&gt;&lt;p&gt;.col(1)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-1"&gt;&lt;p&gt;.col(1)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-1"&gt;&lt;p&gt;.col(1)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-1"&gt;&lt;p&gt;.col(1)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-1"&gt;&lt;p&gt;.col(1)&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+    
+    <h4>Three Columns</h4>
+    
+    <div class="row clearfix">
+        <div class="col-4 bg-gray"><p>.col(4)</p></div>
+        <div class="col-4 bg-gray"><p>.col(4)</p></div>
+        <div class="col-4 bg-gray"><p>.col(4)</p></div>
+    </div>
+    
+    <pre>&lt;div class="row clearfix"&gt;
+    &lt;div class="col-4"&gt;&lt;p&gt;.col(4)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-4"&gt;&lt;p&gt;.col(4)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-4"&gt;&lt;p&gt;.col(4)&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+    
+    <h4>Two Columns</h4>
+    
+    <div class="row clearfix">
+        <div class="col-8 bg-gray"><p>.col(8)</p></div>
+        <div class="col-4 bg-gray"><p>.col(4)</p></div>
+    </div>
+    
+    <pre>&lt;div class="row clearfix"&gt;
+    &lt;div class="col-8"&gt;&lt;p&gt;.col(8)&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="col-4"&gt;&lt;p&gt;.col(4)&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+    
+    <h4>Nesting columns</h4>
+    
+    <div class="row clearfix">
+        <div class="col-6 bg-gray">
+        <p>.col(6)</p>
+            <div class="row clearfix">
+                <div class="col-6 bg-gray-dark"><p>.col(6)</p></div>
+                <div class="col-6 bg-gray-dark"><p>.col(6)</p></div>
+            </div>
+        </div>
+        <div class="col-6 bg-gray">
+        <p>.col(6)</p>
+            <div class="row clearfix">
+                <div class="col-6 bg-gray-dark"><p>.col(6)</p></div>
+                <div class="col-6 bg-gray-dark"><p>.col(6)</p></div>
+            </div>
+        </div>
+    </div>
+    
+    <pre>&lt;div class="row clearfix"&gt;
+    &lt;div class="col-6"&gt;
+    &lt;p&gt;.col(6)&lt;/p&gt;
+        &lt;div class="row clearfix"&gt;
+            &lt;div class="col-6"&gt;&lt;p&gt;.col(6)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class="col-6"&gt;&lt;p&gt;.col(6)&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-6"&gt;
+    &lt;p&gt;.col(6)&lt;/p&gt;
+        &lt;div class="row clearfix"&gt;
+            &lt;div class="col-6"&gt;&lt;p&gt;.col(6)&lt;/p&gt;&lt;/div&gt;
+            &lt;div class="col-6"&gt;&lt;p&gt;.col(6)&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+    
+    <hr>
+        
+    <!-- Colors -->
+        
+    <h2 id="colors">Colors</h2>
+    
+    <h3>Default Colors</h3>
+    
+    <div class="row clearfix">
+        <div class="col-1 bg-black">&nbsp;</div>
+        <div class="col-3">@color-black</div>
+        <div class="col-1 bg-white">&nbsp;</div>
+        <div class="col-3">@color-white</div>
+        <div class="col-1 bg-gray-light">&nbsp;</div>
+        <div class="col-3">@color-light-gray</div>
+    </div>
+    
+    <div class="row clearfix">
+        <div class="col-1 bg-gray">&nbsp;</div>
+        <div class="col-3">@color-gray</div>
+        <div class="col-1 bg-gray-dark">&nbsp;</div>
+        <div class="col-3">@color-dark-gray</div>
+        <div class="col-1 bg-blue-light">&nbsp;</div>
+        <div class="col-3">@color-light-blue</div>
+    </div>
+    
+    <div class="row clearfix">
+        <div class="col-1 bg-blue-dark">&nbsp;</div>
+        <div class="col-3">@color-dark-blue</div>
+        <div class="col-1 bg-orange-light">&nbsp;</div>
+        <div class="col-3">@color-light-orange</div>
+        <div class="col-1 bg-orange-dark">&nbsp;</div>
+        <div class="col-3">@color-dark-orange</div>
+    </div>
+    
+    <h4>Social Media Colors</h4>
+    
+    <div class="row clearfix">
+        <div class="col-1 bg-facebook">&nbsp;</div>
+        <div class="col-3">@color-facebook</div>
+        <div class="col-1 bg-twitter">&nbsp;</div>
+        <div class="col-3">@color-twitter</div>
+        <div class="col-1 bg-youtube">&nbsp;</div>
+        <div class="col-3">@color-youtube</div>
+    </div>
+    
+    <div class="row clearfix">
+        <div class="col-1 bg-google-plus">&nbsp;</div>
+        <div class="col-3">@color-google-plus</div>
+        <div class="col-1 bg-github">&nbsp;</div>
+        <div class="col-3">@color-github</div>
+        <div class="col-1">&nbsp;</div>
+        <div class="col-3">&nbsp;</div>
+    </div>
+    
+    <h3>Variables.less</h3>
+    
+    <pre>@color-black:		rgba(0,0,0,1);
+@color-white:		rgba(255,255,255,1);
+
+@color-light-gray:	rgba(236,240,241,1);
+@color-gray:		darken(@color-light-gray, 10%);
+@color-dark-gray:	darken(@color-light-gray, 20%);
+
+@color-light-blue:	rgba(72,105,214,1);
+@color-dark-blue:	rgba(6,31,112,1);
+
+@color-light-orange:	rgba(255,176,0,1);
+@color-dark-orange:	darken(@color-light-orange, 10%);
+    
+@color-facebook:	rgba(59,89,152,1);
+@color-twitter:		rgba(0,172,237,1);
+@color-youtube:		rgba(187,0,0,1);
+@color-google-plus:	rgba(221,75,57,1);
+@color-github:		rgba(23,21,21,1);</pre>
+
+    <h4>Body and Headings</h4>
+
+    <pre>// Body and Headings
+@body-font-color:	lighten(@color-black, 20%);
+@heading-font-color:	lighten(@color-black, 10%);</pre>
+
+    <h4>Header</h4>
+
+    <pre>// Header
+@header-background:	@color-dark-blue;</pre>
+    
+    <h4>Footer</h4>
+
+    <pre>// Footer
+@footer-extra-bg:	@color-light-gray;
+@footer-background:	@color-dark-blue;
+@footer-text-color:	@color-white;
+@footer-link-color:	@color-light-orange;
+@footer-visited-link:	@footer-link-color;
+@footer-hover-link:	darken(@footer-link-color, 10%);</pre>
+
+    <h4>Navigation</h4>
+
+    <pre>// Navbar
+@nav-background:	@color-light-blue;
+@nav-link-color:	@color-white;
+@nav-visited-link:	@color-white;
+@nav-hover-link:	@color-light-orange;
+@nav-hover-bg:		@color-dark-blue;
+@nav-pull-bg:		@color-dark-blue;
+@nav-pull-color:	@color-white;</pre>
+
+    <h4>Links</h4>
+
+    <pre>// Links
+@link-color:		@color-light-blue;
+@visited-link-color:	@color-light-blue;
+@hover-link-color:	darken(@link-color, 10%);</pre>
+
+    <h4>Buttons</h4>
+
+    <pre>// Buttons
+@button-default-bg:	@color-light-blue;
+@button-default-hover:	darken(@button-default-bg, 10%);
+@button-gray-bg:	@color-dark-gray;
+@button-gray-hover:	darken(@button-gray-bg, 10%);
+@button-orange-bg:	@color-light-orange;
+@button-orange-hover:	darken(@button-orange-bg, 10%);</pre>
+    
+    <h4>Social Media Icons</h4>
+    
+    <pre>// Social Media Icons
+@icon-facebook-link:	@color-facebook;
+@icon-facebook-hover:	darken(@icon-facebook-link, 10%);
+@icon-twitter-link:	@color-twitter;
+@icon-twitter-hover:	darken(@icon-twitter-link, 10%);
+@icon-youtube-link:	@color-youtube;
+@icon-youtube-hover:	darken(@icon-youtube-link, 10%);
+@icon-google-plus-link:	@color-google-plus;
+@icon-google-plus-hover:darken(@icon-google-plus-link, 10%);
+@icon-github-link:	@color-github;
+@icon-github-hover:	darken(@icon-github-link, 10%);</pre>
+    
+    <h4>Forms</h4>
+    
+    <pre>// Forms
+@form-styled-border:	@color-gray;
+@form-styled-focus:	@color-light-blue;</pre>
+    
+    <h4>Panels</h4>
+    
+    <pre>// Panels
+@panel-background:	@color-light-gray;
+@panel-border-color:	@color-dark-gray;</pre>
+        
+    <hr>
+        
+    <!-- Typography -->
+    
+    <h2 id="typography">Typography</h2>
+    
+    <h3>Variables.less</h3>
+    
+    <h4>Import Fonts</h4>
+    
+    <pre>// Fonts
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);</pre>
+    
+    <div class="row clearfix">
+        <div class="col-4"><p><strong>Ubuntu</strong><br /><a href="http://font.ubuntu.com/ufl/" target="_blank">Ubuntu Font License, 1.0</a></p></div>
+        <div class="col-4"><p><strong>Open Sans</strong><br /><a href="http://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache License, version 2.0</a></p></div>
+        <div class="col-4"><p><strong>Inconsolata</strong><br /><a href="http://scripts.sil.org/OFL" target="_blank">SIL Open Font License, 1.1</a></p></div>
+    </div>
+
+    <h4>Base Font</h4>
+
+    <pre>// Base Font
+@base-font:	        'Open Sans', sans-serif;
+@base-font-size:	14px;
+@base-line-height:	1.7;
+@base-font-weight:	400;
+@large-font-size:	125%;
+@small-font-size:	90%;</pre>
+
+    <h4>Heading Font</h4>
+
+    <pre>// Heading Font
+@heading-font:		'Ubuntu', sans-serif;
+@h1-font-size:		38px;
+@h2-font-size:		32px;
+@h3-font-size:		26px;
+@h4-font-size:		20px;
+@h5-font-size:		16px;
+@h6-font-size:		14px;
+@heading-line-height:	1.1;
+@heading-font-weight:	400;
+@heading-margin-bottom:	10px;</pre>
+
+    <h4>Monospaced Font</h4>
+
+    <pre>// Monospaced Font
+@monospace-font:	'Inconsolata', monospace;</pre>
+
+    <h3>Examples</h3>
+    
+    <h4>Headings</h4>
+    
+    <h1>This is heading 1</h1>
+    <h2>This is heading 2</h2>
+    <h3>This is heading 3</h3>
+    <h4>This is heading 4</h4>
+    <h5>This is heading 5</h5>
+    <h6>This is heading 6</h6>
+    
+    <pre>&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;h3&gt;This is heading 3&lt;/h3&gt;
+&lt;h4&gt;This is heading 4&lt;/h4&gt;
+&lt;h5&gt;This is heading 5&lt;/h5&gt;
+&lt;h6&gt;This is heading 6&lt;/h6&gt;</pre>
+    
+    <h4>Paragraphs</h4>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur magna feugiat congue convallis. Donec ac dui quam. Donec a accumsan nulla, non dignissim purus. In turpis arcu, ornare condimentum convallis sed, mattis consequat sapien. Aenean rhoncus turpis dolor, ac suscipit dolor pulvinar in.</p>
+    
+    <pre>&lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;</pre>
+        
+    <p class="large-font">Pellentesque eu est ultrices, accumsan tortor non, varius velit. Ut non vehicula dui. Proin lobortis eu mi eget hendrerit. Vivamus molestie venenatis egestas. Fusce convallis, nisl aliquet rutrum tempor, nibh libero consequat sapien, in lacinia massa nisi id metus. In posuere leo massa. Sed quis feugiat lorem, ut consequat magna.</p>
+    
+    <pre>&lt;p class="large-font"&gt;Pellentesque eu est ultrices...&lt;/p&gt;</pre>
+    
+    <h4>Emphasis</h4>
+    
+    <p><small>This is small text.</small></p>
+    
+    <pre>&lt;small&gt;This is small text.&lt;/small&gt;</pre>
+    
+    <p><strong>This is strong text.</strong></p>
+    
+    <pre>&lt;strong&gt;This is strong text.&lt;/strong&gt;</pre>
+    
+    <p><em>This is emphasized text.</em></p>
+    
+    <pre>&lt;em&gt;This is emphasized text.&lt;/em&gt;</pre>
+    
+    <hr>
+        
+    <!-- Miscellaneous -->
+    
+    <h2 id="misc">Miscellaneous</h2>
+    
+    <h3>Variables.less</h3>
+    
+    <h4>Buttons</h4>
+    
+    <pre>// Buttons
+@button-padding:	10px 20px;
+@button-margin:		5px 0;</pre>
+    
+    <h4>Icons</h4>
+    
+    <pre>// Icons
+@icon-size-medium:	24px;
+@icon-size-large:	32px;</pre>
+    
+    <h4>Forms</h4>
+    
+    <pre>// Forms
+@form-breakpoint:		@medium-devices;
+@form-small-breakpoint:		@small-devices;
+@form-margin:			5px 0;
+@input-padding:			5px;
+@input-max-width:		200px;
+@textarea-max-width:		300px;
+@textarea-height:		100px;</pre>
+    
+    <h4>Horizontal Rule</h4>
+    
+    <pre>// Horizontal Rule
+@hr-margin:		20px 0;</pre>
+    
+    <h4>Panels</h4>
+    
+    <pre>// Panels
+@panel-padding:		10px;
+@panel-border:		1px solid;
+@panel-content-padding:	5px;
+@panel-content-margin:	0;</pre>
+    
+    <h3>Buttons</h3>
+    
+    <p><button type="button" class="button button-default">Default Button</button>
+    <button type="button" class="button button-orange">Orange Button</button>
+    <button type="button" class="button button-gray">Gray Button</button></p>
+    
+    <pre>&lt;button type="button" class="button button-default"&gt;Default Button&lt;/button&gt;
+&lt;button type="button" class="button button-orange"&gt;Orange Button&lt;/button&gt;
+&lt;button type="button" class="button button-gray"&gt;Gray Button&lt;/button&gt;</pre>
+    
+    <h3>Icons</h3>
+    
+    <div class="row clearfix">
+        <div class="col-3"><i class="icon-call"></i> icon-call</div>
+        <div class="col-3"><i class="icon-youtube"></i> icon-youtube</div>
+        <div class="col-3"><i class="icon-email"></i> icon-email</div>
+        <div class="col-3"><i class="icon-facebook"></i> icon-facebook</div>
+    </div>
+    
+    <div class="row clearfix">
+        <div class="col-3"><i class="icon-twitter-bird"></i> icon-twitter-bird</div>
+        <div class="col-3"><i class="icon-googleplus"></i> icon-googleplus</div>
+        <div class="col-3"><i class="icon-github"></i> icon-github</div>
+        <div class="col-3"><i class="icon-desktop"></i> icon-desktop</div>
+    </div>
+    
+    <div class="row clearfix">
+        <div class="col-3"><i class="icon-cogs"></i> icon-cogs</div>
+        <div class="col-3"><i class="icon-person"></i> icon-person</div>
+        <div class="col-3"><i class="icon-linkedin"></i> icon-linkedin</div>
+        <div class="col-3"><i class="icon-wrench"></i> icon-wrench</div>
+    </div>
+    
+    <pre>&lt;i class="icon-name"&gt;&lt;/i&gt;</pre>
+    
+    <p>(This webfont is generated by <a href="http://fontello.com" target="_blank">http://fontello.com</a> open source project. Read <a href="font/FONT-LICENSE.txt" target="_blank">FONT-LICENSE.txt</a>.)</p>
+    
+    <h4>Medium Icons</h4>
+    
+    <p>
+        <i class="icon-call medium-icon"></i>
+        <i class="icon-youtube medium-icon"></i>
+        <i class="icon-email medium-icon"></i>
+        <i class="icon-facebook medium-icon"></i>
+        <i class="icon-twitter-bird medium-icon"></i>
+        <i class="icon-googleplus medium-icon"></i>
+        <i class="icon-github medium-icon"></i>
+        <i class="icon-desktop medium-icon"></i>
+        <i class="icon-cogs medium-icon"></i>
+        <i class="icon-person medium-icon"></i>
+        <i class="icon-linkedin medium-icon"></i>
+        <i class="icon-wrench medium-icon"></i>
+    </p>
+    
+    <pre>&lt;i class="icon-name medium-icon"&gt;&lt;/i&gt;</pre>
+    
+    <h4>Large Icons</h4>
+    
+    <p>
+        <i class="icon-call large-icon"></i>
+        <i class="icon-youtube large-icon"></i>
+        <i class="icon-email large-icon"></i>
+        <i class="icon-facebook large-icon"></i>
+        <i class="icon-twitter-bird large-icon"></i>
+        <i class="icon-googleplus large-icon"></i>
+        <i class="icon-github large-icon"></i>
+        <i class="icon-desktop large-icon"></i>
+        <i class="icon-cogs large-icon"></i>
+        <i class="icon-person large-icon"></i>
+        <i class="icon-linkedin large-icon"></i>
+        <i class="icon-wrench large-icon"></i>
+    </p>
+    
+    <pre>&lt;i class="icon-name large-icon"&gt;&lt;/i&gt;</pre>
+    
+    <h4>Social Media Links</h4>
+    
+    <p>
+        <a href="http://www.youtube.com" class="link-youtube" target="_blank">
+            <i class="icon-youtube medium-icon"></i></a>
+        <a href="http://www.facebook.com" class="link-facebook" target="_blank">
+            <i class="icon-facebook medium-icon"></i></a>
+        <a href="http://www.twitter.com" class="link-twitter" target="_blank">
+            <i class="icon-twitter-bird medium-icon"></i></a>
+        <a href="http://plus.google.com" class="link-google-plus" target="_blank">
+            <i class="icon-googleplus medium-icon"></i></a>
+        <a href="https://github.com" class="link-github" target="_blank">
+            <i class="icon-github medium-icon"></i></a>
+    </p>
+    
+    <pre>&lt;a href="http://www.youtube.com" class="link-youtube" target="_blank"&gt;
+    &lt;i class="icon-youtube medium-icon"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href="http://www.facebook.com" class="link-facebook" target="_blank"&gt;
+    &lt;i class="icon-facebook medium-icon"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href="http://www.twitter.com" class="link-twitter" target="_blank"&gt;
+    &lt;i class="icon-twitter-bird medium-icon"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href="http://plus.google.com" class="link-google-plus" target="_blank"&gt;
+    &lt;i class="icon-googleplus medium-icon"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href="https://github.com" class="link-github" target="_blank"&gt;
+    &lt;i class="icon-github medium-icon"&gt;&lt;/i&gt;&lt;/a&gt;</pre>
+    
+    <h3>Images</h3>
+    
+    <h4>Responsive images</h4>
+    
+    <pre>&lt;img src="image.jpg" alt="" /&gt;</pre>
+    
+    <h4>Full Screen Background Image</h4>
+    
+    <pre>&lt;div id="full-bg-image"&gt;
+  &lt;img src="background-image.jpg" alt=""&gt;
+&lt;/div&gt;</pre>
+    
+    <h3>Forms</h3>
+    
+    <h4>Basic Form</h4>
+    
+    <form>
+        <label for="email-example">
+        <input type="email" id="email-example" placeholder="Email" />
+        </label>
+        
+        <label for="password-example">
+        <input type="password" id="password-example" placeholder="Password" />
+        </label>
+        
+        <label for="checkbox-example">
+        <input type="checkbox" id="checkbox-example" /> Remember me
+        </label>
+        
+        <button class="button button-default" type="submit">Sign In</button>
+    </form>
+    
+    <pre>&lt;form&gt;
+    &lt;label for="email-example"&gt;
+    &lt;input type="email" id="email-example" placeholder="Email" /&gt;
+    &lt;/label&gt;
+        
+    &lt;label for="password-example"&gt;
+    &lt;input type="password" id="password-example" placeholder="Password" /&gt;
+    &lt;/label&gt;
+        
+    &lt;label for="checkbox-example"&gt;
+    &lt;input type="checkbox" id="checkbox-example" /&gt; Remember me
+    &lt;/label&gt;
+        
+    &lt;button class="button button-default" type="submit"&gt;Sign In&lt;/button&gt;
+&lt;/form&gt;</pre>
+    
+    <h4>Stacked Form</h4>
+    
+    <form class="stacked-form">
+        <label for="name-example-stacked">Name:
+	<input type="text" name="name" id="name-example-stacked" placeholder="Enter your name"  />
+        </label>
+        
+        <label for="email-example-stacked">Email:
+        <input type="email" name="email" id="email-example-stacked" />
+        </label>
+        
+        <label for="message-example-stacked">Message:
+        <textarea name="message" id="message-example-stacked"></textarea>
+        </label>
+        
+        <label for="checkbox-example-stacked">
+        <input type="checkbox" id="checkbox-example-stacked" /> Checkbox
+        </label>
+        
+        <label for="radio-button" class="inline-element">
+        <input type="radio" name="radio-example" id="radio-button" value="option1" checked /> Checked radio button
+        </label>
+        
+        <label for="radio-button-2" class="inline-element">
+        <input type="radio" name="radio-example" id="radio-button-2" value="option2" /> Radio button
+        </label>
+        
+        <p><button class="button button-default" type="submit">Submit</button></p>
+    </form>
+    
+    <pre>&lt;form class="stacked-form"&gt;
+    &lt;label for="name-example-stacked"&gt;Name:
+    &lt;input type="text" name="name" id="name-example-stacked" placeholder="Enter your name"  /&gt;
+    &lt;/label&gt;
+        
+    &lt;label for="email-example-stacked"&gt;Email:
+    &lt;input type="email" name="email" id="email-example-stacked" /&gt;
+    &lt;/label&gt;
+        
+    &lt;label for="message-example-stacked"&gt;Message:
+    &lt;textarea name="message" id="message-example-stacked"&gt;&lt;/textarea&gt;
+    &lt;/label&gt;
+        
+    &lt;label for="checkbox-example-stacked"&gt;
+    &lt;input type="checkbox" id="checkbox-example-stacked" /&gt; Checkbox
+    &lt;/label&gt;
+        
+    &lt;label for="radio-button" class="inline-element"&gt;
+    &lt;input type="radio" name="radio-example" id="radio-button" value="option1" checked /&gt; Checked radio button
+    &lt;/label&gt;
+        
+    &lt;label for="radio-button-2" class="inline-element"&gt;
+    &lt;input type="radio" name="radio-example" id="radio-button-2" value="option2" /&gt; Radio button
+    &lt;/label&gt;
+        
+    &lt;p>&lt;button class="button button-default" type="submit"&gt;Submit&lt;/button&gt;&lt;/p&gt;
+&lt;/form&gt;</pre>
+    
+    <h4>Floating Labels</h4>
+    
+    <form class="float-labels">
+        <p><label for="name-example-float">Name:</label>
+	<input type="text" name="name" id="name-example-float" placeholder="Enter your name"  /></p>
+        
+        <p><label for="email-example-float">Email:</label>
+        <input type="email" name="email" id="email-example-float" /></p>
+        
+        <p><label for="message-example-float">Message:</label>
+        <textarea name="message" id="message-example-float"></textarea></p>
+        
+        <p class="float-submit"><button class="button button-default" type="submit">Submit</button></p>
+    </form>
+    
+    <pre>&lt;form class="float-labels"&gt;
+    &lt;p&gt;&lt;label for="name-example-float"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" name="name" id="name-example-float" placeholder="Enter your name"  /&gt;&lt;/p&gt;
+        
+    &lt;p&gt;&lt;label for="email-example-float">Email:&lt;/label&gt;
+    &lt;input type="email" name="email" id="email-example-float" /&gt;&lt;/p&gt;
+        
+    &lt;p&gt;&lt;label for="message-example-float"&gt;Message:&lt;/label&gt;
+    &lt;textarea name="message" id="message-example-float"&gt;&lt;/textarea&gt;&lt;/p&gt;
+        
+    &lt;p class="float-submit"&gt;&lt;button class="button button-default" type="submit"&gt;Submit&lt;/button&gt;&lt;/p&gt;
+&lt;/form&gt;</pre>
+    
+    <h4>Styled Form</h4>
+    
+    <pre>&lt;form class="styled-form"&gt;...&lt;/form&gt;</pre>
+    
+    <h5>Examples</h5>
+    
+    <div class="row clearfix">
+        <div class="col-4">
+            <form class="styled-form">
+                <label>
+                    <input>
+                </label>
+            </form>
+            <pre>&lt;input&gt;</pre>
+        </div>
+        <div class="col-4">
+            <form class="styled-form">
+                <label>
+                    <input type="text">
+                </label>
+            </form>
+            <pre>&lt;input type="text"&gt;</pre>
+        </div>
+        <div class="col-4">
+            <form class="styled-form">
+                <label>
+                    <input type="email">
+                </label>
+            </form>
+            <pre>&lt;input type="email"&gt;</pre>
+        </div>
+    </div>
+    
+    <div class="row clearfix">
+        <div class="col-4">
+            <form class="styled-form">
+                <label>
+                    <input type="password">
+                </label>
+            </form>
+            <pre>&lt;input type="password"&gt;</pre>
+        </div>
+        <div class="col-4">
+            <form class="styled-form">
+                <label>
+                    <input type="checkbox">
+                </label>
+            </form>
+            <pre>&lt;input type="checkbox"&gt;</pre>
+        </div>
+        <div class="col-4">
+            <form class="styled-form">
+                <label>
+                    <input type="radio">
+                </label>
+            </form>
+            <pre>&lt;input type="radio"&gt;</pre>
+        </div>
+    </div>
+    
+    <div class="row clearfix">
+        <div class="col-4">
+            <form class="styled-form">
+                <label>
+                    <select>
+                        <option>Option 1</option>
+                    </select>
+                </label>
+            </form>
+            <pre>&lt;select&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+&lt;/select&gt;</pre>
+        </div>
+        <div class="col-4">
+            <form class="styled-form">
+                <label>
+                    <input disabled>
+                </label>
+            </form>
+            <pre>&lt;input disabled&gt;</pre>
+        </div>
+        <div class="col-4">
+            <form class="styled-form">
+                <label>
+                    <textarea></textarea>
+                </label>
+            </form>
+            <pre>&lt;textarea"&gt;&lt;/textarea"&gt;</pre>
+        </div>
+    </div>
+    
+    <h3>Panels</h3>
+    
+    <div class="panel">
+        <h4>Regular panel</h4>
+        <p>This is regular panel.</p>
+    </div>
+    
+    <pre>&lt;div class="panel"&gt;
+    &lt;h4&gt;Regular panel&lt;/h4&gt;
+    &lt;p&gt;This is regular panel.&lt;/p&gt;
+&lt;/div&gt;</pre>
+    
+    <h3>Useful CSS Classes</h3>
+    
+    <div class="row clearfix">
+        <div class="col-3"><p><strong>.text-center</strong><br />text-align: center</p></div>
+        <div class="col-3"><p><strong>.text-right</strong><br />text-align: right</p></div>
+        <div class="col-3"><p><strong>.right</strong><br />float: right;</p></div>
+        <div class="col-3"><p><strong>.left</strong><br />float: left;</p></div>
+    </div>
+    
+    <div class="row clearfix">
+        <div class="col-3"><p><strong>.space</strong><br />margin: 10px</p></div>
+        <div class="col-3"><p><strong>.top</strong><br />margin-top: 10px</p></div>
+        <div class="col-3"><p><strong>.last</strong><br />margin-right: 0</p></div>
+        <div class="col-3"><p><strong>.clearfix</strong><br />micro clearfix</p></div>
+    </div>
+    
+</div>
+
+<!-- Credits -->
+
+<div id="footer-extra">
+    <div class="content">
+        
+    <h2 id="credits">Credits</h2>
+    
+    <div class="row clearfix">
+        <div class="col-4"><p><strong><a href="https://github.com/necolas/normalize.css" target="_blank">normalize.css</a></strong> - A collection of HTML element and attribute style-normalizations.</p></div>
+        <div class="col-4"><p><strong><a href="https://github.com/additiveinverse/normalize.less" target="_blank">normalize.less</a></strong> - The LESS equivalent to normalize.css.</p></div>
+        <div class="col-4"><p><strong><a href="https://github.com/jquery/jquery" target="_blank">jQuery</a></strong> - JavaScript Library.</p></div>
+    </div>
+    
+    <div class="row clearfix">
+        <div class="col-4"><p><strong><a href="http://www.hongkiat.com/blog/responsive-web-nav/" target="_blank">Thoriq Firdaus</a></strong> - Inspiration for Responsive Navigation.</p></div>
+        <div class="col-4"><p><strong><a href="https://github.com/aFarkas/html5shiv" target="_blank">html5shiv</a></strong> - This script is the defacto way to enable use of HTML5 sectioning elements in legacy Internet Explorer.</p></div>
+        <div class="col-4"><p><strong><a href="https://github.com/scottjehl/Respond" target="_blank">Respond.js</a></strong> - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more).</p></div>
+    </div>
+    
+    <div class="row clearfix">
+        <div class="col-4"><p><strong><a href="http://fontello.com/" target="_blank">Fontello</a></strong> - Iconic fonts scissors. This tool lets you combine icon webfonts for your own project.</p></div>
+        <div class="col-4"><p><strong><a href="https://www.google.com/fonts" target="_blank">Google Fonts</a></strong> - Hundreds of free, open-source fonts optimized for the web.</p></div>
+        <div class="col-4"><p><strong><a href="http://syojuonauti.fi/netticv/" target="_blank">Reetta Angelvo</a></strong> - Visual layout.</p></div>
+    </div>
+    
+    </div>
+</div>
+        
+    <!-- Footer -->
+    
+<div id="footer">
+    <div class="content">
+        
+    <p class="text-center">Teerian Framework - Copyright (c) 2014 Teerian - <a href="https://github.com/teerian/Teerian-Framework/blob/master/LICENSE" target="_blank">Licensed under the MIT license</a>.</p>
+    
+    </div>
+</div>
+
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/teerian.js"></script>
+
+</body>
+</html>

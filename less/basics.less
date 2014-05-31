@@ -1,0 +1,62 @@
+// Header
+
+#header {
+	background-color:	@header-background;
+	img {
+		display: 		block;
+	}
+	@media @header-breakpoint {
+		display:		none;
+	}
+}
+
+// Content
+
+.content {
+	max-width:	@page-width;
+    margin:		0 auto;
+	padding:	0 @page-padding;
+}
+
+// Footer
+
+#footer-extra {
+	background-color:	@footer-extra-bg;
+	padding:			@footer-padding;
+	margin:				@footer-extra-margin;
+}
+
+#footer {
+	background-color:	@footer-background;
+	padding:			@footer-padding;
+	color:				@footer-text-color;
+	h1, h2, h3, h4, h5, h6 {
+		color:			@footer-text-color;
+	}
+	a:link {
+		color:			@footer-link-color;
+	}
+	a:visited {
+		color:			@footer-visited-link;
+	}
+	a:hover {
+		color:			@footer-hover-link;
+	}
+}
+
+// Links
+
+a:link		{
+	color:				@link-color;
+	text-decoration:	none;
+}
+
+a:visited	{
+	color:				@visited-link-color;
+	text-decoration:	none;
+}
+
+a:hover		{
+	color:				@hover-link-color;
+	text-decoration:	underline;
+}

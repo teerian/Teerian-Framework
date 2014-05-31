@@ -1,0 +1,178 @@
+// ------------
+// Basic Styles
+// ------------
+
+// Content
+@page-width:		1000px;
+@page-padding:		2.8%;
+
+// Media Queries
+@small-devices:		~"(max-width: 480px)";
+@medium-devices:	~"(max-width: 768px)";
+@large-devices:		~"(max-width: 992px)";
+
+// Header
+@header-breakpoint:	@medium-devices;
+
+// Navigation
+@nav-height:		40px;
+@nav-font-weight:	700;
+@nav-breakpoint:	@medium-devices;
+@nav-pull-icon:		url('../img/nav-icon.png');
+@nav-pull-padding:	@page-padding;
+
+// Footer
+@footer-padding:		20px 0;
+@footer-extra-margin:	40px 0 0 0;
+
+// ------------
+// Grid Options
+// ------------
+
+@row-width:				100%;
+@grid-columns:			12;
+@col-margin-horizontal:	1.4%;
+@col-margin-vertical:	1.0%;
+@grid-breakpoint:		@small-devices;
+
+// ------
+// Colors
+// ------
+
+@color-black:			rgba(0,0,0,1);
+@color-white:			rgba(255,255,255,1);
+
+@color-light-gray:		rgba(236,240,241,1);
+@color-gray:			darken(@color-light-gray, 10%);
+@color-dark-gray:		darken(@color-light-gray, 20%);
+
+@color-light-blue:		rgba(72,105,214,1);
+@color-dark-blue:		rgba(6,31,112,1);
+
+@color-light-orange:	rgba(255,176,0,1);
+@color-dark-orange:		darken(@color-light-orange, 10%);
+
+@color-facebook:		rgba(59,89,152,1);
+@color-twitter:			rgba(0,172,237,1);
+@color-youtube:			rgba(187,0,0,1);
+@color-google-plus:		rgba(221,75,57,1);
+@color-github:			rgba(23,21,21,1);
+
+// Body and Headings
+@body-font-color:		lighten(@color-black, 20%);
+@heading-font-color:	lighten(@color-black, 10%);
+
+// Header
+@header-background:		@color-dark-blue;
+
+// Footer
+@footer-extra-bg:		@color-light-gray;
+@footer-background:		@color-dark-blue;
+@footer-text-color:		@color-white;
+@footer-link-color:		@color-light-orange;
+@footer-visited-link:	@footer-link-color;
+@footer-hover-link:		darken(@footer-link-color, 10%);
+
+// Navbar
+@nav-background:		@color-light-blue;
+@nav-link-color:		@color-white;
+@nav-visited-link:		@color-white;
+@nav-hover-link:		@color-light-orange;
+@nav-hover-bg:			@color-dark-blue;
+@nav-pull-bg:			@color-dark-blue;
+@nav-pull-color:		@color-white;
+
+// Links
+@link-color:			@color-light-blue;
+@visited-link-color:	@color-light-blue;
+@hover-link-color:		darken(@link-color, 10%);
+
+// Buttons
+@button-default-bg:		@color-light-blue;
+@button-default-hover:	darken(@button-default-bg, 10%);
+@button-gray-bg:		@color-dark-gray;
+@button-gray-hover:		darken(@button-gray-bg, 10%);
+@button-orange-bg:		@color-light-orange;
+@button-orange-hover:	darken(@button-orange-bg, 10%);
+
+// Social Media Icons
+@icon-facebook-link:	@color-facebook;
+@icon-facebook-hover:	darken(@icon-facebook-link, 10%);
+@icon-twitter-link:		@color-twitter;
+@icon-twitter-hover:	darken(@icon-twitter-link, 10%);
+@icon-youtube-link:		@color-youtube;
+@icon-youtube-hover:	darken(@icon-youtube-link, 10%);
+@icon-google-plus-link:	@color-google-plus;
+@icon-google-plus-hover:darken(@icon-google-plus-link, 10%);
+@icon-github-link:		@color-github;
+@icon-github-hover:		darken(@icon-github-link, 10%);
+
+// Forms
+@form-styled-border:	@color-gray;
+@form-styled-focus:		@color-light-blue;
+
+// Panels
+@panel-background:		@color-light-gray;
+@panel-border-color:	@color-dark-gray;
+
+// ----------
+// Typography
+// ----------
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
+// Base Font
+@base-font:				'Open Sans', sans-serif;
+@base-font-size:		14px;
+@base-line-height:		1.7;
+@base-font-weight:		400;
+@large-font-size:		125%;
+@small-font-size:		90%;
+
+// Heading Font
+@heading-font:			'Ubuntu', sans-serif;
+@h1-font-size:			38px;
+@h2-font-size:			32px;
+@h3-font-size:			26px;
+@h4-font-size:			20px;
+@h5-font-size:			16px;
+@h6-font-size:			14px;
+@heading-line-height:	1.1;
+@heading-font-weight:	400;
+@heading-margin-bottom:	10px;
+
+// Monospaced Font
+@monospace-font:		'Inconsolata', monospace;
+
+// -------------
+// Miscellaneous
+// -------------
+
+// Buttons
+@button-padding:	10px 20px;
+@button-margin:		5px 0;
+
+// Icons
+@icon-size-medium:	24px;
+@icon-size-large:	32px;
+
+// Forms
+@form-breakpoint:			@medium-devices;
+@form-small-breakpoint:		@small-devices;
+@form-margin:				5px 0;
+@input-padding:				5px;
+@input-max-width:			200px;
+@textarea-max-width:		300px;
+@textarea-height:			100px;
+
+// Horizontal Rule
+@hr-margin:			20px 0;
+
+// Panels
+@panel-padding:			10px;
+@panel-border:			1px solid;
+@panel-content-padding:	5px;
+@panel-content-margin:	0;

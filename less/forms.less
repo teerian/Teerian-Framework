@@ -1,0 +1,88 @@
+// Forms
+
+form {
+	margin:				@form-margin;
+	> label,
+	button {
+		margin:			10px 0 !important;
+		@media @form-breakpoint {
+			display:	block !important;
+		}
+	}
+}
+
+input[type="checkbox"],
+input[type="radio"],
+.inline-element {
+	display:		inline !important;
+	width:			auto !important;
+}
+
+input,
+textarea {
+	padding: 		@input-padding;
+	width:			100%;
+	max-width:		@input-max-width;
+	.box-sizing;
+	@media @form-small-breakpoint {
+		max-width:	100% !important;
+	}
+}
+
+textarea {
+	max-width:	@textarea-max-width;
+	height:		@textarea-height;
+}
+
+// Stacked Form
+
+.stacked-form {
+	label,
+	input,
+	textarea,
+	button {
+		display:	block;
+	}
+}
+
+// Floating Labels
+
+.float-labels {
+	label,
+	button {
+		margin:			@input-padding 0 !important;
+
+	}
+	label {
+		float:			left;
+		display:		inline;
+		text-align:		right;
+		margin-right: 	15px !important;
+		width: 			100px;
+		@media @form-small-breakpoint {
+			float:		none;
+			text-align:	left;
+		}
+	}
+	.float-submit {
+		margin-left: 	115px !important;
+		@media @form-small-breakpoint {
+			margin-left: 0 !important;
+		}
+	}
+}
+
+// Styled Form
+
+.styled-form {
+	input,
+	textarea {
+		border: 			2px solid @form-styled-border;
+		.border-radius;
+		outline: 			0;
+	}
+	input:focus,
+	textarea:focus {
+		border-color: 		@form-styled-focus;
+	}
+}
